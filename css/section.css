@@ -1,0 +1,8 @@
+article img {
+    width: 25%;
+    float: right;
+}
+
+.modal-dialog {
+    width: 80%;
+}
