@@ -1,3 +1,19 @@
+body {
+    font-family: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+b, strong {
+    font-family: "Ubuntu-Bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+b i, strong i {
+    font-family: "Ubuntu-Bold-Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+i {
+    font-family: "Ubuntu-Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 footer > div {
     border-top: 1px solid #333;
 }
+
