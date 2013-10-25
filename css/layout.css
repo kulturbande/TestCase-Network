@@ -13,7 +13,14 @@ i {
     font-family: "Ubuntu-Italic", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-footer > div {
-    border-top: 1px solid #333;
+header .navbar {
+	margin-top: 50px;
+}
+
+footer {
+    margin: 20px auto 0;
+	padding: 10px 0 10px;
+	color: #fff;
+	background: url(../img/footer_background.gif) repeat-x #333;
 }
 

@@ -1,0 +1,14 @@
+
+#products {
+    margin: 10px 0;
+	padding: 0;
+}
+
+#products li {
+	list-style-type: none;
+}
+
+#products li img {
+	float: left;
+	margin-right: 5px;
+}
