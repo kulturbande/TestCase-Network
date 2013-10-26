@@ -1,4 +1,3 @@
-
 #products {
     margin: 10px 0;
 	padding: 0;
@@ -8,7 +7,46 @@
 	list-style-type: none;
 }
 
-#products li img {
+#products li div.product {
+	width: 50px;
+	height: 50px;
 	float: left;
 	margin-right: 5px;
+	background: url('../img/side_mail.png') no-repeat #fff;
+}
+
+#products li:hover div.product.mail {
+	background: url('../img/side_mail_hover.png');
+}
+
+#products li div.product.cam {
+	background: url('../img/side_cam.png');
+}
+
+#products li:hover div.product.cam {
+	background: url('../img/side_cam_hover.png');
+}
+
+#products li div.product.lock {
+	background: url('../img/side_lock.png');
+}
+
+#products li:hover div.product.lock {
+	background: url('../img/side_lock_hover.png');
+}
+
+#products li div.product.computer {
+	background: url('../img/side_computer.png');
+}
+
+#products li:hover div.product.computer {
+	background: url('../img/side_computer_hover.png');
+}
+
+#products li div.product.cloud {
+	background: url('../img/side_cloud.png');
+}
+
+#products li:hover div.product.cloud {
+	background: url('../img/side_cloud_hover.png');
 }
