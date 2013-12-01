@@ -12,41 +12,45 @@
 	height: 50px;
 	float: left;
 	margin-right: 5px;
-	background: url('../img/side_mail.png') no-repeat #fff;
+	background: url('../img/side_sprite.png') no-repeat #fff;
+}
+
+#products li div.product.mail {
+	background-position: 0 0;
 }
 
 #products li:hover div.product.mail {
-	background: url('../img/side_mail_hover.png');
+	background-position: 0 -50px;
 }
 
 #products li div.product.cam {
-	background: url('../img/side_cam.png');
+	background-position: -200px 0;
 }
 
 #products li:hover div.product.cam {
-	background: url('../img/side_cam_hover.png');
+	background-position: -200px -50px;
 }
 
 #products li div.product.lock {
-	background: url('../img/side_lock.png');
+	background-position: -100px 0;
 }
 
 #products li:hover div.product.lock {
-	background: url('../img/side_lock_hover.png');
+	background-position: -100px -50px;
 }
 
 #products li div.product.computer {
-	background: url('../img/side_computer.png');
+	background-position: -50px 0;
 }
 
 #products li:hover div.product.computer {
-	background: url('../img/side_computer_hover.png');
+	background-position: -50px -50px;
 }
 
 #products li div.product.cloud {
-	background: url('../img/side_cloud.png');
+	background-position: -150px 0;
 }
 
 #products li:hover div.product.cloud {
-	background: url('../img/side_cloud_hover.png');
+	background-position: -150px -50px;
 }
