@@ -1,16 +1,4 @@
 @font-face {
-    font-family: 'Ubuntu-Bold';
-    src: url(../fonts/vendors/Ubuntu-Bold.ttf);
-}
-@font-face {
-    font-family: 'Ubuntu-Bold-Italic';
-    src: url(../fonts/vendors/Ubuntu-BoldItalic.ttf);
-}
-@font-face {
-    font-family: 'Ubuntu-Italic';
-    src: url(../fonts/vendors/Ubuntu-Italic.ttf);
-}
-@font-face {
     font-family: 'Ubuntu';
     src: url(../fonts/vendors/Ubuntu-Regular.ttf);
 }
