@@ -12,41 +12,57 @@
 	height: 50px;
 	float: left;
 	margin-right: 5px;
-	background: url('../img/side_mail.png') no-repeat #fff;
+	font-family: 'side';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	font-size: 50px;
+	color: #a2a2a2;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-#products li:hover div.product.mail {
-	background: url('../img/side_mail_hover.png');
+.icon-camera:before {
+	content: "\e600";
+}
+.icon-lock:before {
+	content: "\e601";
+}
+.icon-cloud:before {
+	content: "\e602";
+}
+.icon-screen:before {
+	content: "\e603";
+}
+.icon-envelop:before {
+	content: "\e604";
 }
 
-#products li div.product.cam {
-	background: url('../img/side_cam.png');
+#products li div.product.mail:before {
+	content: "\e604";
 }
 
-#products li:hover div.product.cam {
-	background: url('../img/side_cam_hover.png');
+#products li div.product.cam:before {
+	content: "\e600";
 }
 
-#products li div.product.lock {
-	background: url('../img/side_lock.png');
+#products li div.product.lock:before {
+	content: "\e601";
 }
 
-#products li:hover div.product.lock {
-	background: url('../img/side_lock_hover.png');
+#products li div.product.computer:before {
+	content: "\e603";
 }
 
-#products li div.product.computer {
-	background: url('../img/side_computer.png');
+#products li div.product.cloud:before {
+	content: "\e602";
 }
 
-#products li:hover div.product.computer {
-	background: url('../img/side_computer_hover.png');
-}
-
-#products li div.product.cloud {
-	background: url('../img/side_cloud.png');
-}
-
-#products li:hover div.product.cloud {
-	background: url('../img/side_cloud_hover.png');
+#products li:hover div.product {
+	color: #303030;
 }
