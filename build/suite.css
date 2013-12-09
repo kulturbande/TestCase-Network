@@ -7189,7 +7189,7 @@ td.visible-print {
 }
 @font-face {
     font-family: 'Ubuntu';
-    src: url(../fonts/vendors/Ubuntu-Regular.ttf);
+    src: url(../build/fonts/vendors/Ubuntu-Regular.ttf);
 }
 
 @font-face {
