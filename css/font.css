@@ -1,15 +1,15 @@
 @font-face {
     font-family: 'Ubuntu';
-    src: url(http://cdn.html5-performance.de/fonts/vendors/Ubuntu-Regular.ttf);
+    src: url(http://font.html5-performance.de/Ubuntu-Regular.ttf);
 }
 
 @font-face {
 	font-family: 'side';
-	src:url('http://cdn.html5-performance.de/fonts/vendors/side.eot');
-	src:url('http://cdn.html5-performance.de/fonts/vendors/side.eot?#iefix') format('embedded-opentype'),
-		url('http://cdn.html5-performance.de/fonts/vendors/side.ttf') format('truetype'),
-		url('http://cdn.html5-performance.de/fonts/vendors/side.woff') format('woff'),
-		url('http://cdn.html5-performance.de/fonts/vendors/side.svg#side') format('svg');
+	src:url('http://font.html5-performance.de/side.eot');
+	src:url('http://font.html5-performance.de/side.eot?#iefix') format('embedded-opentype'),
+		url('http://font.html5-performance.de/side.ttf') format('truetype'),
+		url('http://font.html5-performance.de/side.woff') format('woff'),
+		url('http://font.html5-performance.de/side.svg#side') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
