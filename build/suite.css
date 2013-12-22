@@ -7189,14 +7189,14 @@ td.visible-print {
 }
 @font-face {
     font-family: 'Ubuntu';
-    src: url(http://static.html5-performance.de/gzip/Ubuntu-Regular.ttf.gz);
+    src: url(http://static.html5-performance.de/gzip/Ubuntu-Regular.gz.ttf);
 }
 
 @font-face {
 	font-family: 'side';
 	src:url('http://static.html5-performance.de/several/fonts/vendors/side.eot');
 	src:url('http://static.html5-performance.de/several/fonts/vendors/side.eot?#iefix') format('embedded-opentype'),
-		url('http://static.html5-performance.de/gzip/side.ttf.gz') format('truetype'),
+		url('http://static.html5-performance.de/gzip/side.gz.ttf') format('truetype'),
 		url('http://static.html5-performance.de/several/fonts/vendors/side.woff') format('woff'),
 		url('http://static.html5-performance.de/several/fonts/vendors/side.svg#side') format('svg');
 	font-weight: normal;
