@@ -7189,16 +7189,16 @@ td.visible-print {
 }
 @font-face {
     font-family: 'Ubuntu';
-    src: url(http://static.html5-performance.de/master/fonts/vendors/Ubuntu-Regular.ttf);
+    src: url(http://static.html5-performance.de/gzip/Ubuntu-Regular.ttf.gz);
 }
 
 @font-face {
 	font-family: 'side';
-	src:url('http://static.html5-performance.de/master/fonts/vendors/side.eot');
-	src:url('http://static.html5-performance.de/master/fonts/vendors/side.eot?#iefix') format('embedded-opentype'),
-		url('http://static.html5-performance.de/master/fonts/vendors/side.ttf') format('truetype'),
-		url('http://static.html5-performance.de/master/fonts/vendors/side.woff') format('woff'),
-		url('http://static.html5-performance.de/master/fonts/vendors/side.svg#side') format('svg');
+	src:url('http://static.html5-performance.de/several/fonts/vendors/side.eot');
+	src:url('http://static.html5-performance.de/several/fonts/vendors/side.eot?#iefix') format('embedded-opentype'),
+		url('http://static.html5-performance.de/gzip/side.ttf.gz') format('truetype'),
+		url('http://static.html5-performance.de/several/fonts/vendors/side.woff') format('woff'),
+		url('http://static.html5-performance.de/several/fonts/vendors/side.svg#side') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
