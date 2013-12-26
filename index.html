@@ -58,21 +58,21 @@
 						<li data-target="#carousel-example" data-slide-to="1"></li>
 						<li data-target="#carousel-example" data-slide-to="2"></li>
 					</ol>
-					<div class="carousel-inner">
+					<div class="carousel-inner" style="width: 100%">
 						<div class="item active">
-							<img src="build/img/slider_1.jpg" alt="Slider 1">
+							<div class="delayed-image-load" data-src="build/img/responsive/slider_1-{width}{pixel_ratio}.jpg" data-alt="Slider 1" >
 							<div class="carousel-caption">
 								erstes Bild
 							</div>
 						</div>
 						<div class="item">
-							<img src="build/img/slider_2.jpg" alt="Slider 2">
+							<img class="delayed-image-load" data-src="build/img/responsive/slider_2-{width}{pixel_ratio}.jpg" alt="Slider 2">
 							<div class="carousel-caption">
 								zweites Bild
 							</div>
 						</div>
 						<div class="item">
-							<img src="build/img/slider_3.jpg" alt="Slider 3">
+							<img class="delayed-image-load" data-src="build/img/responsive/slider_3-{width}{pixel_ratio}.jpg" alt="Slider 3">
 							<div class="carousel-caption">
 								drittes Bild
 							</div>
@@ -236,5 +236,8 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+		new Imager({ availableWidths: [240, 480, 640, 720, 940, 1140] });
+		</script>
 	</body>
 </html>
