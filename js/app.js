@@ -4,6 +4,6 @@ jQuery(document).ready(function() {
         var image = jQuery(this).find('img');
         var modal = jQuery('#imageModel');
         modal.find('h4').text(image.attr('alt'));
-        modal.find('.modal-body').html('<img src="'+image.data('modal-src')+'" alt="Modal Image" class="img-responsive">');
+        modal.find('.modal-body').html('<img src="'+image.parent().data('modal-src')+'" alt="Modal Image" class="img-responsive">');
     });
 });

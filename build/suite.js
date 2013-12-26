@@ -10847,7 +10847,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
             new_collection = [];
 
         for (; i < length; i++) {
-            new_collection[i] = callbackEach(collection[i]);
+            new_collection[i] = callbackEach(collection[i], i);
         }
 
         return new_collection;
@@ -11005,6 +11005,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
         gif.width = element.getAttribute('data-width');
         gif.setAttribute('data-src', element.getAttribute('data-src'));
+        gif.setAttribute('alt', element.getAttribute('data-alt') || this.gif.alt);
 
         element.parentNode.replaceChild(gif, element);
 
@@ -11012,23 +11013,19 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     };
 
     Imager.prototype.changeDivsToEmptyImages = function(){
-        var divs = this.divs,
-            i    = divs.length,
-            element;
+        var self = this;
 
-        while (i--) {
-            element = divs[i];
-
-            if (this.lazyload) {
-                if (this.isThisElementOnScreen(element)) {
-                    this.divs[i] = this.createGif(element);
+        applyEach(this.divs, function(element, i){
+            if (self.lazyload) {
+                if (self.isThisElementOnScreen(element)) {
+                    self.divs[i] = self.createGif(element);
                 } else {
-                    this.imagesOffScreen.push(element);
+                    self.imagesOffScreen.push(element);
                 }
             } else {
-                this.divs[i] = this.createGif(element);
+                self.divs[i] = self.createGif(element);
             }
-        }
+        });
 
         if (this.initialized) {
             this.checkImagesNeedReplacing(this.divs);
@@ -11039,19 +11036,27 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
         // document.body.scrollTop was working in Chrome but didn't work on Firefox, so had to resort to window.pageYOffset
         // but can't fallback to document.body.scrollTop as that doesn't work in IE with a doctype (?) so have to use document.documentElement.scrollTop
         var offset = (window.hasOwnProperty('pageYOffset')) ? window.pageYOffset : document.documentElement.scrollTop;
+        var elementOffsetTop = 0;
 
-        return (element.offsetTop < (this.viewportHeight + offset)) ? true : false;
+        if (element.offsetParent) {
+            do {
+                elementOffsetTop += element.offsetTop;
+            }
+            while (element = element.offsetParent);
+        }
+
+        return (elementOffsetTop < (this.viewportHeight + offset)) ? true : false;
     };
 
     Imager.prototype.checkImagesNeedReplacing = function (images) {
-        var i = images.length;
+        var self = this;
 
         if (!this.isResizing) {
             this.isResizing = true;
 
-            while (i--) {
-                this.replaceImagesBasedOnScreenDimensions(images[i]);
-            }
+            applyEach(images, function(image){
+                self.replaceImagesBasedOnScreenDimensions(image);
+            });
 
             this.isResizing = false;
         }
@@ -11155,6 +11160,7 @@ jQuery(document).ready(function() {
         var image = jQuery(this).find('img');
         var modal = jQuery('#imageModel');
         modal.find('h4').text(image.attr('alt'));
-        modal.find('.modal-body').html('<img src="'+image.data('modal-src')+'" alt="Modal Image" class="img-responsive">');
+        modal.find('.modal-body').html('<img src="'+image.parent().data('modal-src')+'" alt="Modal Image" class="img-responsive">');
     });
 });
+
