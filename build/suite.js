@@ -11038,6 +11038,10 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
         var offset = (window.hasOwnProperty('pageYOffset')) ? window.pageYOffset : document.documentElement.scrollTop;
         var elementOffsetTop = 0;
 
+        if (element.getAttribute('data-disable-onload') && this.initialized) {
+            return false;
+        }
+
         if (element.offsetParent) {
             do {
                 elementOffsetTop += element.offsetTop;
@@ -11163,4 +11167,6 @@ jQuery(document).ready(function() {
         modal.find('.modal-body').html('<img src="'+image.parent().data('modal-src')+'" alt="Modal Image" class="img-responsive">');
     });
 });
+
+
 

@@ -7,3 +7,5 @@ jQuery(document).ready(function() {
         modal.find('.modal-body').html('<img src="'+image.parent().data('modal-src')+'" alt="Modal Image" class="img-responsive">');
     });
 });
+
+
