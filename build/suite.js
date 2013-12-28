@@ -10832,7 +10832,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
     'use strict';
 
-    var defaultWidths, getKeys, isArray, nextTick;
+    var defaultWidths, getKeys, isArray, nextTick, currentWidth;
 
     nextTick = window.requestAnimationFrame ||
                window.mozRequestAnimationFrame ||
@@ -10934,6 +10934,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
         this.scrollDelay      = opts.scrollDelay || 250;
         this.onResize         = opts.hasOwnProperty('onResize') ? opts.onResize : true;
         this.lazyload         = opts.hasOwnProperty('lazyload') ? opts.lazyload : false;
+        this.forceSameSize    = opts.hasOwnProperty('forceSameSize') ? opts.forceSameSize : false;
         this.scrolled         = false;
         this.devicePixelRatio = Imager.getPixelRatio();
 
@@ -11074,9 +11075,13 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     };
 
     Imager.prototype.determineAppropriateResolution = function (image) {
-        var imagewidth    = image.clientWidth,
+        var imagewidth    = (currentWidth && this.forceSameSize) ? currentWidth : image.clientWidth,
             i             = this.availableWidths.length,
             selectedWidth = this.availableWidths[i - 1];
+
+        if (currentWidth == null) {
+            currentWidth = imagewidth;
+        }
 
         while (i--) {
             if (imagewidth <= this.availableWidths[i]) {
