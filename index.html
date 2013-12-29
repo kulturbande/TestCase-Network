@@ -246,8 +246,8 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			var slider_images = new Imager('.carousel .delayed-image-load', { availableWidths: [240, 480, 640, 720, 940, 1140], lazyload: true });
-			var article_images = new Imager('article .delayed-image-load', { availableWidths: [117, 194, 236], className: 'img-thumbnail', lazyload: true });
+			new Imager('.carousel .delayed-image-load', { availableWidths: [240, 480, 640, 720, 940, 1140], forceSameSize: true, lazyload: true});
+			new Imager('article .delayed-image-load', { availableWidths: [117, 194, 236], className: 'img-thumbnail', lazyload: true });
 			jQuery(document).ready(function() {
 			    jQuery('#carousel-example').on('slide.bs.carousel', jQuery.proxy(slider_images.checkImagesNeedReplacing, slider_images));
 			});
