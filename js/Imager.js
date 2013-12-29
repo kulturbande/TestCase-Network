@@ -188,7 +188,7 @@
 
         applyEach(this.divs, function(element, i){
             if (self.lazyload) {
-                if (self.isThisElementOnScreen(element)) {
+                if (self.isThisElementOnScreen(element) && element.clientWidth) {
                     self.divs[i] = self.createGif(element);
                 } else {
                     self.imagesOffScreen.push(element);
