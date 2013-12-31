@@ -10,6 +10,10 @@ footer {
     margin: 20px auto 0;
 	padding: 10px 0 10px;
 	color: #fff;
-	background: url(img/footer_background.gif) repeat-x #333;
+	background: #333;
+	background-image: -webkit-linear-gradient(top, #99989a 0%, #161616 100%); 
+	background-image:    -moz-linear-gradient(top, #99989a 0%, #161616 100%); 
+	background-image: 	   -o-linear-gradient(top, #99989a 0%, #161616 100%); 
+	background-image: 		  linear-gradient(top, #99989a 0%, #161616 100%);
 }
 
