@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="145px" height="143px" viewBox="0 0 145 143" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Logo Header</title>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-1" fill="#A2A2A2" cx="72.5" cy="71.5" r="70.5"></circle>
+        <circle id="Inner-Oval" stroke="#FBFBFB" stroke-width="2" cx="72.5" cy="71.5" r="68.5"></circle>
+        <text id="Beispiel" fill="#FFFFFF" font-family="Silom" font-size="24" font-weight="bold">
+            <tspan x="21" y="73" fill="#FFFFFF">Beispiel</tspan>
+        </text>
+        <path d="M1.94921875,92.1757812 L11.3613281,102.832031 L1.8203125,113.888672 L41.6992188,113.888672 C41.6992188,113.888672 43.4648437,113.795409 44.875,112.220214 C46.2851562,110.645019 46.2851562,106.688965 46.2851562,106.688965 L46.2851562,99.3330079 C46.2851562,99.3330079 46.3320313,95.6054687 44.875,93.890625 C43.4179688,92.1757813 41.6992188,92.1757812 41.6992188,92.1757812 L1.94921875,92.1757812 Z" id="Path-1" stroke="#D1D1D1" stroke-width="2" fill="#A2A2A2"></path>
+        <path d="M98.9492188,92.1757812 L108.361328,102.832031 L98.8203125,113.888672 L138.699219,113.888672 C138.699219,113.888672 140.464844,113.795409 141.875,112.220214 C143.285156,110.645019 143.285156,106.688965 143.285156,106.688965 L143.285156,99.3330079 C143.285156,99.3330079 143.332031,95.6054687 141.875,93.890625 C140.417969,92.1757813 138.699219,92.1757812 138.699219,92.1757812 L98.9492188,92.1757812 Z" id="Path-2" stroke="#D1D1D1" stroke-width="2" fill="#A2A2A2" transform="translate(121.000000, 103.000000) rotate(-180.000000) translate(-121.000000, -103.000000) "></path>
+        <rect id="Rectangle-1" stroke="#D1D1D1" stroke-width="2" fill="#A2A2A2" x="18" y="85" width="110" height="24"></rect>
+        <text id="Die-Seite" fill="#FFFFFF" font-family="Silom" font-size="14" font-weight="bold">
+            <tspan x="40" y="102" fill="#FFFFFF">Die Seite</tspan>
+        </text>
+    </g>
+</svg>
