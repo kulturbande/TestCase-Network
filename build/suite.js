@@ -9854,6 +9854,15 @@ jQuery(document).ready(function() {
 slider_images = new Imager('.carousel .delayed-image-load', { availableWidths: [240, 480, 640, 720, 940, 1140], forceSameSize: true, lazyload: true});
 new Imager('article .delayed-image-load', { availableWidths: [117, 194, 236], className: 'img-thumbnail', lazyload: true });
 jQuery(document).ready(function() {
+	var commentGroup = $('.list-group');
+	var commentGroupPosition = commentGroup.offset();
+	var height = $(window).height();
+	var lazy_load = false;
+
+	var addListItem = function(data) {
+		var listItem = $('<li><h4>'+data.email+'</h4><p>'+data.message+'</p></li>');
+		commentGroup.append(listItem);
+	}
 
 	$("#comments form").on('submit', function(event) {
 		event.preventDefault();
@@ -9863,9 +9872,22 @@ jQuery(document).ready(function() {
 			type: form.attr('method'),
 			data: form.find('input[type="email"], textarea').serialize(),
 			success: function(item) {
-				var listItem = $('<li><h4>'+item.data.comment.email+'</h4><p>'+item.data.comment.message+'</p></li>')
-				$('.list-group').append(listItem);
+				addListItem(item.data.comment);
 			}
 		});
+	});
+
+	$(document).on('scroll', function() {
+		if (!lazy_load && ($(window).scrollTop() + height > commentGroupPosition.top)) {
+			lazy_load = true;
+			$.ajax({
+				url: 'network/branch_data',
+				success: function(items) {
+					$.each(items.data, function(index, value) {
+						addListItem(value.comment);
+					});
+				}
+			});
+		}
 	});
 });
