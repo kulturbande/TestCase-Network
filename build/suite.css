@@ -3913,6 +3913,19 @@ article img {
 .modal-dialog {
     width: 80%;
 }
+
+.list-group {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.list-group li {
+	border-bottom: 1px solid #ddd;
+}
+
+.list-group li:last-child {
+	border: none;
+}
 #products {
     margin: 10px 0;
 	padding: 0;
